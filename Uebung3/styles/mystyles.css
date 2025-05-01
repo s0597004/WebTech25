@@ -1,0 +1,48 @@
+header h2 {
+    background-color: rgb(25, 119, 17);
+    text-align: center;
+    color: white;
+    padding: 2%;
+    font-size: 2em;
+    margin-bottom: 1%;
+}
+
+/*Grid Layout fuer Staedte*/
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Spalten mit gleicher Breite*/
+    grid-template-rows: repeat(3, 1fr); /* 3 gleich hohe Zeilen */
+    column-gap: 2%;
+    row-gap: 6%;
+    justify-items: center; /* Karten in jeder Grid-Zelle horizontal zentrieren */
+}
+
+.citycard {
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+                rgba(0, 0, 0, 0.07) 0px 2px 4px,
+                rgba(0, 0, 0, 0.07) 0px 4px 8px,
+                rgba(0, 0, 0, 0.07) 0px 8px 16px,
+                rgba(0, 0, 0, 0.07) 0px 16px 32px, 
+                rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    padding: 20px;
+    width: 180px; /* Feste Breite der Karte */
+    height: 220px; /* Feste Hoehe der Karte */
+    display: flex; /* Flexbox aktiviert */
+    flex-direction: column; /* Vertikale Anordnung: Bild oben, Text unten */
+    align-items: center; /* Inhalt horizontal zentrieren */
+    justify-content: space-between; /* Gleichmaessiger Abstand zwischen Bild und Text */
+    border-radius: 8px;
+}
+
+.cityimage img {
+   width: 100%; /* Bild passt sich der Containerbreite an */
+   max-width: 120px;
+   height: auto; /* Hoehe automatisch je nach Bildverhaeltnis */
+}
+
+.cityname {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
